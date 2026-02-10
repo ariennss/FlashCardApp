@@ -1,6 +1,8 @@
 let buttonIcons = [
   { text: "Shuffle", path: "/images/icon-shuffle.svg" },
   { text: "Reset", path: "" },
+  { text: "I Know This", path: "/images/icon-check.svg" },
+  { text: "Reset Progress", path: "/images/icon-reset.svg" },
 ];
 
 export default function Button({ btnText, hasIcon }) {
@@ -11,7 +13,7 @@ export default function Button({ btnText, hasIcon }) {
 
   return (
     <>
-      <button>
+      <button className="btn-style">
         {hasIcon && <img src={iconPath} />}
         <span>{btnText}</span>
       </button>

@@ -1,11 +1,11 @@
 import "./App.css";
-import Header from "./components/Header";
-import FlashcardSection from "./components/FlashcardSection";
+import PageHeader from "./components/PageHeader";
+import FlashcardSection from "./components/flashcard-section/FlashcardSection";
 
 function App() {
   return (
     <>
-      <Header />
+      <PageHeader />
       <FlashcardSection />
     </>
   );

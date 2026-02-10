@@ -1,10 +1,10 @@
-import Button from "./Button";
+import Button from "./common/Button";
 
-export default function Header() {
+export default function PageHeader() {
   return (
     <>
       <img src="/images/logo-small.svg" alt="" />
-      <div>
+      <div className="page-toggler">
         <Button btnText={"Study Mode"} />
         <Button btnText={"All Cards"} />
       </div>
