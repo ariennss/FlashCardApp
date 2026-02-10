@@ -1,8 +1,15 @@
-.btn-white-shadow {
-
+.btn-style {
+    border-radius: 2rem;
 }
 
-.btn-yellow-shadow {
-
+.btn-style.yellow {
+    background-color: var(--yellow-500);
 }
 
+.btn-style.white {
+    background-color: var(--neutral-0);
+}
+
+.btn-style.btn-shadow {
+    box-shadow: 0 4px 0 #3d1a11;
+}

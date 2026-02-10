@@ -1,3 +1,5 @@
+import "./common.css";
+
 let buttonIcons = [
   { text: "Shuffle", path: "/images/icon-shuffle.svg" },
   { text: "Reset", path: "" },
@@ -5,15 +7,18 @@ let buttonIcons = [
   { text: "Reset Progress", path: "/images/icon-reset.svg" },
 ];
 
-export default function Button({ btnText, hasIcon }) {
+export default function Button({ btnText, hasIcon, color, hasShadow }) {
   let iconPath;
   if (hasIcon) {
-    iconPath = buttonIcons.find((x) => x.text === btnText).path;
+    let icon = buttonIcons.find((x) => x.text === btnText);
+    iconPath = icon ? icon.path : "";
   }
+
+  let className = `btn-style ${color} ${hasShadow ? "btn-shadow" : ""}`;
 
   return (
     <>
-      <button className="btn-style">
+      <button className={className}>
         {hasIcon && <img src={iconPath} />}
         <span>{btnText}</span>
       </button>
