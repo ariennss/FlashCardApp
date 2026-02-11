@@ -1,25 +1,34 @@
-let buttonIcons = [
-  { text: "Shuffle", path: "/images/icon-shuffle.svg" },
-  { text: "Reset", path: "" },
-  { text: "I Know This", path: "/images/icon-check.svg" },
-  { text: "Reset Progress", path: "/images/icon-reset.svg" },
+import styles from "./button.module.css";
+
+let buttonTypes = [
+    { text: "Shuffle", path: "/images/icon-shuffle.svg", class: "shuffle-btn" },
+    { text: "Reset", path: "" },
+    { text: "I Know This", path: "/images/icon-check.svg" },
+    { text: "Reset Progress", path: "/images/icon-reset.svg" },
+    { text: "Previous", path: "" },
+    { text: "Next", path: "" },
+    { text: "Study Mode" },
+    { text: "All Cards" },
 ];
 
-export default function Button({ btnText, hasIcon, color, hasShadow }) {
-  let iconPath;
-  if (hasIcon) {
-    let icon = buttonIcons.find((x) => x.text === btnText);
-    iconPath = icon ? icon.path : "";
-  }
+export default function Button({ btnText }) {
+    let buttonType = buttonTypes.find((x) => x.text === btnText);
 
-  let className = `btn-style ${color} ${hasShadow ? "btn-shadow" : ""}`;
+    if (!buttonType) {
+        return <>Missing component</>;
+    }
 
-  return (
-    <>
-      <button className={className}>
-        {hasIcon && <img src={iconPath} />}
-        <span>{btnText}</span>
-      </button>
-    </>
-  );
+    let iconPath;
+    if (buttonType.path && buttonType.path != "") {
+        iconPath = buttonType.path;
+    }
+
+    return (
+        <>
+            <button className={`${styles[buttonType.class]}`}>
+                {iconPath && <img src={iconPath} />}
+                <span>{btnText}</span>
+            </button>
+        </>
+    );
 }
