@@ -1,4 +1,151 @@
-.page-toggler {
-    background-color: var(--blue-600);
-    border-radius: 0rem;
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("/fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("/fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("/fonts/Poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("/fonts/Poppins/Poppins-Bold.ttf");
+}
+
+:root {
+    /* ========== Colors ========== */
+
+    /* Neutral */
+    --neutral-900: #2e1401;
+    --neutral-600: #6d5b4d;
+    --neutral-100: #f7f3f0;
+    --neutral-0: #ffffff;
+
+    /* Accent colors */
+    --yellow-500: #f8cb46;
+    --blue-400: #92adeb;
+    --blue-600: #5072c7;
+    --teal-400: #47d9c9;
+    --pink-400: #fc8ae5;
+    --pink-500: #f073a3;
+    --pink-700: #e11966;
+
+    /* ========== Typography ========== */
+    --ff-regular: "Poppins-Regular";
+    --ff-medium: "Poppins-Medium";
+    --ff-semiBold: "Poppins-SemiBold";
+    --ff-bold: "Poppins-Bold";
+
+    /* preset 1 */
+    --p1-ff: var(--ff-bold); /* ff: font family */
+    --p1-fw: 700; /* fw: font weight*/
+    --p1-fs: 40px; /* fs: font size */
+    --p1-lh: 120%; /* lh: line height */
+    --p1-ls: 0%; /* ls: letter spacing */
+
+    /* preset 1 tablet */
+    --p1t-ff: var(--ff-bold);
+    --p1t-fw: 700; /* Bold */
+    --p1t-fs: 32px;
+    --p1t-lh: 120%;
+    --p1t-ls: 0%;
+
+    /* preset 1 mobile */
+    --p1m-ff: var(--ff-bold);
+    --p1m-fw: 700; /* Bold */
+    --p1m-fs: 24px;
+    --p1m-lh: 120%;
+    --p1m-ls: 0%;
+
+    /* preset 2 */
+    --p2-ff: var(--ff-semiBold);
+    --p2-fw: 600; /* SemiBold */
+    --p2-fs: 24px;
+    --p2-lh: 120%;
+    --p2-ls: 0%;
+
+    /* preset 3 */
+    --p3-ff: var(--ff-semiBold);
+    --p3-fw: 600; /* SemiBold */
+    --p3-fs: 20px;
+    --p3-lh: 120%;
+    --p3-ls: 0%;
+
+    /* preset 4 SemiBold */
+    --p4-sb-ff: var(--ff-semiBold);
+    --p4-sb-fw: 600; /* SemiBold */
+    --p4-sb-fs: 16px;
+    --p4-sb-lh: 120%;
+    --p4-sb-ls: 0%;
+
+    /* preset 4 Medium */
+    --p4-md-ff: var(--ff-medium);
+    --p4-md-fw: 500; /* Medium */
+    --p4-md-fs: 16px;
+    --p4-md-lh: 120%;
+    --p4-md-ls: 0%;
+
+    /* preset 4 Regular */
+    --p4-rg-ff: var(--ff-regular);
+    --p4-rg-fw: 400; /* Regular */
+    --p4-rg-fs: 16px;
+    --p4-rg-lh: 140%;
+    --p4-rg-ls: 0%;
+
+    /* preset 5 */
+    --p5-ff: var(--ff-medium);
+    --p5-fw: 500; /* Medium */
+    --p5-fs: 14px;
+    --p5-lh: 140%;
+    --p5-ls: 0%;
+
+    /* preset 5 Regular */
+    --p5-rg-ff: var(--ff-regular);
+    --p5-rg-fw: 400; /* Regular */
+    --p5-rg-fs: 14px;
+    --p5-rg-lh: 140%;
+    --p5-rg-ls: 0%;
+
+    /* preset 6 */
+    --p6-ff: var(--ff-medium);
+    --p6-fw: 500; /* Medium */
+    --p6-fs: 14px;
+    --p6-lh: 130%;
+    --p6-ls: -3%;
+
+    /* ========== Spacing ========== */
+    --spacing-0: 0;
+    --spacing-25: 2px;
+    --spacing-50: 4px;
+    --spacing-75: 6px;
+    --spacing-100: 8px;
+    --spacing-125: 10px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-250: 20px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-1000: 80px;
+    --spacing-1200: 96px;
+    --spacing-1400: 112px;
+    --spacing-1600: 128px;
+    --spacing-1800: 140px;
+
+    /* ========== Radius ========== */
+    --radius-0: 0;
+    --radius-4: 4px;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-10: 10px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-20: 20px;
+    --radius-24: 24px;
+    --radius-full: 999px;
 }

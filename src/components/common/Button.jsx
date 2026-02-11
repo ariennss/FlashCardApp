@@ -1,5 +1,3 @@
-import "./common.css";
-
 let buttonIcons = [
   { text: "Shuffle", path: "/images/icon-shuffle.svg" },
   { text: "Reset", path: "" },
