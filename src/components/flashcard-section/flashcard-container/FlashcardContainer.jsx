@@ -1,11 +1,12 @@
+import styles from "./flashcardcontainer.module.css";
 import FlashcardActions from "./FlashcardActions";
 import FlashcardContent from "./FlashcardContent";
 
 export default function FlashcardContainer() {
-  return (
-    <>
-      <FlashcardContent />
-      <FlashcardActions />
-    </>
-  );
+    return (
+        <section className={styles["flashcardContainer"]}>
+            <FlashcardContent />
+            <FlashcardActions />
+        </section>
+    );
 }

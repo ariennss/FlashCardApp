@@ -7,8 +7,8 @@ let buttonTypes = [
     { text: "Reset Progress", path: "/images/icon-reset.svg" },
     { text: "Previous", path: "" },
     { text: "Next", path: "" },
-    { text: "Study Mode" },
-    { text: "All Cards" },
+    { text: "Study Mode", class: "studymode-btn" },
+    { text: "All Cards", class: "allcards" },
 ];
 
 export default function Button({ btnText }) {
@@ -26,7 +26,9 @@ export default function Button({ btnText }) {
     return (
         <>
             <button className={`${styles[buttonType.class]}`}>
-                {iconPath && <img src={iconPath} />}
+                {iconPath && (
+                    <img src={iconPath} className={styles["btn-icon"]} />
+                )}
                 <span>{btnText}</span>
             </button>
         </>
