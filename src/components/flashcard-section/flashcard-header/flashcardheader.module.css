@@ -1,18 +1,13 @@
 .dropdown {
-    padding-block: var(--spacing-150);
-    padding-inline: var(--spacing-200);
     background-color: var(--neutral-100);
     border: 1px solid var(--neutral-900);
     border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    gap: 8px;
     color: var(--neutral-900);
     font-family: var(--p4-md-ff);
     font-weight: var(--p4-md-fw);
     font-size: var(--p4-md-fs);
-    line-height: var(--p4-md-lh);
-    letter-spacing: var(--md-rg-ls);
+    letter-spacing: var(--p4-md-ls);
+    height: 43px;
 }
 
 .headerContainer {
@@ -25,11 +20,6 @@
 }
 
 .dropdownContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    justify-content: flex-start;
     row-gap: var(--spacing-100);
 }
 

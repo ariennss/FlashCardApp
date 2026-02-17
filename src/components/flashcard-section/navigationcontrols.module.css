@@ -1,0 +1,17 @@
+.navigationContainer {
+    padding: var(--spacing-200);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: auto;
+}
+
+.cardNumber {
+    color: var(--neutral-600);
+    font-family: var(--p5-ff);
+    font-weight: var(--p5-fw);
+    font-size: var(--p5-fs);
+    line-height: var(--p5-lh);
+    letter-spacing: var(--p5-ls);
+}
