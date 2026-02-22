@@ -73,3 +73,16 @@ h6 {
 #__next {
     isolation: isolate;
 }
+
+html,
+body,
+#root {
+    min-height: 100vh;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral-100);
+}

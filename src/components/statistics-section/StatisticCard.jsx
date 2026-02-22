@@ -1,15 +1,19 @@
 import styles from "./statistics.module.css";
 
-export default function StatisticCard() {
+export default function StatisticCard({
+    statisticName,
+    howManyCards,
+    iconPath,
+}) {
     return (
         <>
             <div className={styles["statisticsCard"]}>
                 <div className={styles["statisticsText"]}>
-                    <span>Total cards</span>
-                    <span className={styles.cardNumber}>40</span>
+                    <span>{statisticName}</span>
+                    <span className={styles.cardNumber}>{howManyCards}</span>
                 </div>
                 <div className={styles.statisticsIconContainer}>
-                    <img src="/images/icon-stats-total.svg" alt="" />
+                    <img src={iconPath} alt="" />
                 </div>
             </div>
         </>

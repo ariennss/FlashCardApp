@@ -92,5 +92,6 @@
 
     .statisticsContainer {
         flex-direction: column;
+        width: 392px;
     }
 }

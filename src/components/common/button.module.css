@@ -125,3 +125,7 @@
     letter-spacing: var(--md-rg-ls);
     height: fit-content;
 }
+
+button:hover {
+    cursor: pointer;
+}
