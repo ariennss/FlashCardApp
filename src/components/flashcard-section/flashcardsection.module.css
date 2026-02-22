@@ -26,9 +26,15 @@
     .flashcardPage {
         display: flex;
         justify-content: space-between;
+        align-items: stretch;
+        gap: var(--spacing-200);
     }
 
     .flashcardSection {
         width: 70%;
+    }
+
+    .statisticsSection {
+        flex: 1;
     }
 }

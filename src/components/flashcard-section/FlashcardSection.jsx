@@ -7,7 +7,7 @@ import NavigationControls from "./NavigationControls";
 export default function FlashcardSection() {
     return (
         <section className={styles.flashcardPage}>
-            <section className={styles["flashcardSection"]}>
+            <div className={styles.flashcardSection}>
                 <div className={styles.prova}>
                     <FlashcardHeader />
                     <div>
@@ -15,8 +15,10 @@ export default function FlashcardSection() {
                         <NavigationControls />
                     </div>
                 </div>
-            </section>
-            <StatisticsContainer />
+            </div>
+            <div className={styles.statisticsSection}>
+                <StatisticsContainer />
+            </div>
         </section>
     );
 }

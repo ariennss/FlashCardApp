@@ -1,5 +1,5 @@
 .dropdown {
-    background-color: var(--neutral-100);
+    background-color: var(--neutral-0);
     border: 1px solid var(--neutral-900);
     border-radius: var(--radius-full);
     color: var(--neutral-900);
@@ -8,6 +8,7 @@
     font-size: var(--p4-md-fs);
     letter-spacing: var(--p4-md-ls);
     height: 43px;
+    padding-inline: 20px;
 }
 
 .headerContainer {

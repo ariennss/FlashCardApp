@@ -8,6 +8,7 @@
     border-radius: var(--radius-16);
     border: 1px solid var(--neutral-900);
     box-shadow: 2px 2px 1px var(--neutral-900);
+    height: 100%;
 }
 
 .statisticsCardsContainer {
@@ -81,6 +82,12 @@
 @media (min-width: 1024px) {
     .statisticsCardsContainer {
         flex-direction: column;
+        flex: 1;
+    }
+
+    .statisticsCard {
+        flex: 1;
+        height: auto;
     }
 
     .statisticsContainer {
