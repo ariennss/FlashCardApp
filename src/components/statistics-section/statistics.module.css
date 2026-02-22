@@ -66,3 +66,24 @@
     letter-spacing: var(--p1m-ls);
     color: var(--neutral-900);
 }
+
+@media (min-width: 640px) {
+    .statisticsCardsContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .statisticsCard {
+        flex-basis: calc(50% - var(--spacing-100));
+    }
+}
+
+@media (min-width: 1024px) {
+    .statisticsCardsContainer {
+        flex-direction: column;
+    }
+
+    .statisticsContainer {
+        flex-direction: column;
+    }
+}

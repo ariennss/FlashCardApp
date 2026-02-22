@@ -32,4 +32,13 @@
 .checkboxContainer {
     display: flex;
     gap: var(--spacing-100);
+    padding: var(--spacing-100);
+}
+
+@media (min-width: 720px) {
+    .dropdownContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

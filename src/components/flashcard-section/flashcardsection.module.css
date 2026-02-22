@@ -4,10 +4,31 @@
     align-items: center;
     justify-content: flex-start;
     gap: var(--spacing-0);
-    background-color: var(--neutral-100);
+    background-color: var(--neutral-0);
     border-top: 1px solid var(--neutral-900);
     border-left: 1px solid var(--neutral-900);
     border-bottom: 3px solid var(--neutral-900);
     border-right: 3px solid var(--neutral-900);
     border-radius: var(--radius-16);
+}
+
+.prova {
+    width: 100%;
+}
+
+.flashcardPage {
+    display: grid;
+    gap: var(--spacing-200);
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .flashcardPage {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flashcardSection {
+        width: 70%;
+    }
 }
