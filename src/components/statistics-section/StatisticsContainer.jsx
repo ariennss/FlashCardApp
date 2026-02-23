@@ -1,10 +1,7 @@
 import styles from "./statistics.module.css";
 import StatisticCard from "./StatisticCard";
-import { FlashcardContext } from "../../context/FlashcardContext";
-import { useContext } from "react";
 
-export default function StatisticsContainer() {
-    const cards = useContext(FlashcardContext);
+export default function StatisticsContainer({ cards }) {
     let totalCards = cards.length;
     let mastered = cards.filter((x) => x.knownCount === 5).length;
     let inProgress = cards.filter(
