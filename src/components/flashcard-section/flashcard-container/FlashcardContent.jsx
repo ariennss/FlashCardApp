@@ -1,6 +1,6 @@
 import styles from "./flashcardcontainer.module.css";
 
-export default function FlashcardContent({ question }) {
+export default function FlashcardContent({ question, masteredLevel }) {
     return (
         <>
             <div className={styles["flashcardContent"]}>
@@ -11,7 +11,7 @@ export default function FlashcardContent({ question }) {
                         Click to reveal answer
                     </p>
                 </div>
-                <p className={styles["masteryLevel"]}>0/5</p>
+                <p className={styles["masteryLevel"]}>{masteredLevel}/5</p>
             </div>
         </>
     );

@@ -10,17 +10,49 @@ import { useState } from "react";
 export default function FlashcardSection() {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const { cardsObject, dispatch } = useContext(FlashcardContext);
-    const cards = cardsObject.cards;
+    const cards = cardsObject.cards; // da filtrare per selectedCategory
     const currentCard = cards[currentCardIndex];
+
+    function onShuffle() {
+        dispatch({ type: "shuffle" });
+        setCurrentCardIndex(0);
+    }
+
+    function onResetStatus() {
+        dispatch({ type: "resetStatus", cardId: currentCard.id });
+    }
+
+    function onIKnowThis() {
+        dispatch({ type: "iKnowThis", cardId: currentCard.id });
+    }
+
+    function onNextClick() {
+        if (currentCardIndex < cards.length - 1) {
+            setCurrentCardIndex(currentCardIndex + 1);
+        }
+    }
+
+    function onPreviousClick() {
+        if (currentCardIndex > 0) {
+            setCurrentCardIndex(currentCardIndex - 1);
+        }
+    }
 
     return (
         <section className={styles.flashcardPage}>
             <div className={styles.flashcardSection}>
                 <div className={styles.prova}>
-                    <FlashcardHeader />
+                    <FlashcardHeader onShuffle={onShuffle} />
                     <div>
-                        <FlashcardContainer currentCard={currentCard} />
-                        <NavigationControls />
+                        <FlashcardContainer
+                            currentCard={currentCard}
+                            onResetStatus={onResetStatus}
+                            onIKnowThis={onIKnowThis}
+                        />
+                        <NavigationControls
+                            onNextClick={onNextClick}
+                            onPreviousClick={onPreviousClick}
+                        />
                     </div>
                 </div>
             </div>

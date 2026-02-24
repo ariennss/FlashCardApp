@@ -15,7 +15,7 @@ let buttonTypes = [
     { text: "All Cards", class: "allcards" },
 ];
 
-export default function Button({ btnText }) {
+export default function Button({ btnText, onClick }) {
     let buttonType = buttonTypes.find((x) => x.text === btnText);
 
     if (!buttonType) {
@@ -38,7 +38,7 @@ export default function Button({ btnText }) {
 
     return (
         <>
-            <button className={`${styles[buttonType.class]}`}>
+            <button className={`${styles[buttonType.class]}`} onClick={onClick}>
                 {iconPath && (
                     <img src={iconPath} className={styles["btn-icon"]} />
                 )}
