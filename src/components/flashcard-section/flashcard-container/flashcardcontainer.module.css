@@ -9,7 +9,7 @@
     gap: var(--spacing-250);
 }
 
-.flashcardContent {
+.flashcardContentQuestion {
     background-color: var(--pink-400);
     border: 2px solid var(--neutral-900);
     border-radius: var(--radius-16);
@@ -23,6 +23,24 @@
     align-items: center;
     text-align: center;
     box-shadow: 2px 2px 1px var(--neutral-900);
+    cursor: pointer;
+}
+
+.flashcardContentAnswer {
+    background-color: var(--blue-400);
+    border: 2px solid var(--neutral-900);
+    border-radius: var(--radius-16);
+    height: 22rem;
+    width: 100%;
+    padding-inline: var(--spacing-200);
+    padding-block: var(--spacing-300);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 2px 1px var(--neutral-900);
+    cursor: pointer;
 }
 
 .categoryName {

@@ -9,6 +9,7 @@ import { useState } from "react";
 
 export default function FlashcardSection() {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
+    const [showingAnswer, setShowAnswer] = useState(false);
     const { cardsObject, dispatch } = useContext(FlashcardContext);
     const cards = cardsObject.cards; // da filtrare per selectedCategory
     const currentCard = cards[currentCardIndex];
@@ -16,6 +17,7 @@ export default function FlashcardSection() {
     function onShuffle() {
         dispatch({ type: "shuffle" });
         setCurrentCardIndex(0);
+        setShowAnswer(false);
     }
 
     function onResetStatus() {
@@ -30,12 +32,18 @@ export default function FlashcardSection() {
         if (currentCardIndex < cards.length - 1) {
             setCurrentCardIndex(currentCardIndex + 1);
         }
+        setShowAnswer(false);
     }
 
     function onPreviousClick() {
         if (currentCardIndex > 0) {
             setCurrentCardIndex(currentCardIndex - 1);
         }
+        setShowAnswer(false);
+    }
+
+    function showAnswer() {
+        setShowAnswer(!showingAnswer);
     }
 
     return (
@@ -48,6 +56,8 @@ export default function FlashcardSection() {
                             currentCard={currentCard}
                             onResetStatus={onResetStatus}
                             onIKnowThis={onIKnowThis}
+                            showingAnswer={showingAnswer}
+                            onShowAnswer={showAnswer}
                         />
                         <NavigationControls
                             onNextClick={onNextClick}
