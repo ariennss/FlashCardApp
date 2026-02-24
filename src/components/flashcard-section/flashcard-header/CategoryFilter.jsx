@@ -1,10 +1,28 @@
 import styles from "./flashcardheader.module.css";
 
-export default function CategoryFilter() {
+export default function CategoryFilter({
+    categories,
+    onChangeSelectedCategory,
+}) {
+    const options = categories.map((x) => {
+        return (
+            <option key={x} value={x}>
+                {x}
+            </option>
+        );
+    });
+
     return (
         <>
-            <select name="" id="" className={styles["dropdown"]}>
-                <option value="art">All Categories</option>
+            <select
+                name=""
+                id=""
+                onChange={(e) => {
+                    onChangeSelectedCategory(e.target.value);
+                }}
+                className={styles["dropdown"]}
+            >
+                {options}
             </select>
             <div className={styles["checkboxContainer"]}>
                 <input type="checkbox" id="hideMastered" name="hideMastered" />

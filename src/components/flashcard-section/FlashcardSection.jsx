@@ -10,9 +10,24 @@ import { useState } from "react";
 export default function FlashcardSection() {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [showingAnswer, setShowAnswer] = useState(false);
+
     const { cardsObject, dispatch } = useContext(FlashcardContext);
-    const cards = cardsObject.cards; // da filtrare per selectedCategory
+    const [selectedCategory, setSelectedCategory] = useState(
+        cardsObject.selectedCategory,
+    );
+    const cards = cardsObject.cards.filter((card) => {
+        return selectedCategory === "all" || card.category === selectedCategory;
+    });
     const currentCard = cards[currentCardIndex];
+    const allCards = cardsObject.cards;
+    const allCategories = allCards.map((x) => x.category);
+    const distinctCategoriesSet = new Set(allCategories);
+    const distinctCategories = ["all", ...distinctCategoriesSet];
+
+    function onChangeSelectedCategory(category) {
+        setSelectedCategory(category);
+        setCurrentCardIndex(0);
+    }
 
     function onShuffle() {
         dispatch({ type: "shuffle" });
@@ -50,7 +65,11 @@ export default function FlashcardSection() {
         <section className={styles.flashcardPage}>
             <div className={styles.flashcardSection}>
                 <div className={styles.prova}>
-                    <FlashcardHeader onShuffle={onShuffle} />
+                    <FlashcardHeader
+                        onShuffle={onShuffle}
+                        categories={distinctCategories}
+                        onChangeSelectedCategory={onChangeSelectedCategory}
+                    />
                     <div>
                         <FlashcardContainer
                             currentCard={currentCard}
