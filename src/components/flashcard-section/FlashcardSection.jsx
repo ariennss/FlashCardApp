@@ -7,6 +7,13 @@ import { useContext } from "react";
 import { FlashcardContext } from "../../context/FlashcardContext";
 import { useState } from "react";
 
+//TODO: implement hide mastered checkbox
+//TODO: add progress bar on mastered
+//TODO: change colors of statistic card
+//TODO: add sparks / stars in the card container
+//TODO: add app title when on desktop mode
+//TODO: add stile to dropdown
+
 export default function FlashcardSection() {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [showingAnswer, setShowAnswer] = useState(false);
