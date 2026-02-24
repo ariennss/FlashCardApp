@@ -81,6 +81,7 @@ export default function FlashcardSection() {
                         <NavigationControls
                             onNextClick={onNextClick}
                             onPreviousClick={onPreviousClick}
+                            cardIndex={currentCardIndex}
                         />
                     </div>
                 </div>
