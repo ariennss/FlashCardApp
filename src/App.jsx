@@ -7,6 +7,8 @@ import data from "/src/data.json";
 
 console.log("Dati: " + data.flashcards);
 function App() {
+    //add a state to toggle between the flashcard section and the editing section
+
     return (
         <section className={styles["mainContainer"]}>
             <FlashcardProvider>

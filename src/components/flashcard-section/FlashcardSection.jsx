@@ -13,6 +13,8 @@ import { useState } from "react";
 //TODO: add sparks / stars in the card container
 //TODO: add app title when on desktop mode
 //TODO: add stile to dropdown
+//TODO: update card category when changing category filter
+//TODO: the selectedCategory should actually be a LIST of selected categories since i could want to see more categories together
 
 export default function FlashcardSection() {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
